@@ -11,7 +11,7 @@ $$
 \cos{\theta_{i,p}} = \frac{z_{i}^{\top} z_{p}}{\|z_{i}\| \|z_{p}\|},
 $$
 
-where $\theta_{i,p}$ is the angle between the embeddings $**z**_i$ and $**z**_p$. A similar formula applies to $**z**_i$ and $**z**_a$. The decision boundary for $**z**_{i}$, given specific $p$ (positive) and $a$ (negative) samples, is defined as:
+where $\theta_{i,p}$ is the angle between the embeddings $z_i$ and $z_p$. A similar formula applies to $z_i$ and $z_a$. The decision boundary for $z_{i}$, given specific $p$ (positive) and $a$ (negative) samples, is defined as:
 
 $$
 \theta_{i, p} = \theta_{i, a}.
@@ -34,7 +34,7 @@ $$
 
 ### Effect of Margin $m$
 
-With this loss, the decision boundary for $\mathbf{z}_{i}$ is shifted to:
+With this loss, the decision boundary for $z_{i}$ is shifted to:
 
 $$
 \theta_{i, p} + m = \theta_{i, a}.
@@ -48,7 +48,7 @@ This improves **alignment** (closeness of positive-pair embeddings) and **unifor
 
 ## Comparison with SupCon Loss
 
-The SupMarginCon loss provides more discriminative properties than conventional loss functions such as the Supervised Contrastive (SupCon) loss, as it incorporates the margin $m$ to enhance robustness and decision-making accuracy.
+The SupMarginCon loss provides more discriminative properties than conventional loss functions, such as the Supervised Contrastive (SupCon) loss, as it incorporates the margin $m$ to enhance robustness and decision-making accuracy.
 
 ---
 
@@ -68,4 +68,16 @@ _Fig. 1(c): Incorrect decision due to perturbation on $\mathbf{z}_a$._
 ![Decision Boundary with Margin](assets/SupMarginConD.pdf)  
 _Fig. 1(d): SupMarginCon with margin $m$ ensures robustness against perturbations._
 
-With the margin $m$, embeddings $\mathbf{z}_p$ and $\mathbf{z}_a$ can tolerate larger perturbations without causing incorrect decisions.
+With the margin $m$, embeddings $z_p$ and $\z_a$ can tolerate larger perturbations without causing incorrect decisions.
+
+# Citation
+
+```bibtex
+@inproceedings{li2023discriminative,
+  title={Discriminative speaker representation via contrastive learning with class-aware attention in angular space},
+  author={Li, Zhe and Mak, Man-Wai and Meng, Helen Mei-Ling},
+  booktitle={ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={1--5},
+  year={2023},
+  organization={IEEE}
+}
