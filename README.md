@@ -26,7 +26,7 @@ Without a decision margin, small perturbations of the embedding vectors around t
 To address this issue, we introduce an additive angular margin $m$ to the decision boundary. The resulting loss, called **Supervised Margin Contrastive (SupMarginCon)** loss, is defined as:
 
 $$
-\mathcal{L}_{\text{SupMarginCon}} = 
+L_{SupMarginCon} = 
 \sum_{i=1}^{N} \frac{-1}{|P(i)|} \sum_{p \in P(i)} 
 \log \frac{\exp \left(\cos \left(\theta_{i, p} + m\right) / \tau\right)}
 {\sum_{a \in A(i)} \exp \left(\cos \left(\theta_{i, a}\right) / \tau\right)}.
@@ -56,16 +56,16 @@ The SupMarginCon loss provides more discriminative properties than conventional 
 
 ### Decision Boundary and Perturbations
 
-![Decision Boundary without Margin](assets/SupMarginConA.pdf)  
+![Decision Boundary without Margin](assets/SupMarginConA.png)  
 _Fig. 1(a): Decision boundary $\theta_{i,p} = \theta_{i,a}$ without a margin._
 
-![Perturbation in Positive Sample](assets/SupMarginConB.pdf)  
+![Perturbation in Positive Sample](assets/SupMarginConB.png)  
 _Fig. 1(b): Incorrect decision due to perturbation on $\mathbf{z}_p$._
 
-![Perturbation in Negative Sample](assets/SupMarginConC.pdf)  
+![Perturbation in Negative Sample](assets/SupMarginConC.png)  
 _Fig. 1(c): Incorrect decision due to perturbation on $\mathbf{z}_a$._
 
-![Decision Boundary with Margin](assets/SupMarginConD.pdf)  
+![Decision Boundary with Margin](assets/SupMarginConD.png)  
 _Fig. 1(d): SupMarginCon with margin $m$ ensures robustness against perturbations._
 
 With the margin $m$, embeddings $z_p$ and $\z_a$ can tolerate larger perturbations without causing incorrect decisions.
