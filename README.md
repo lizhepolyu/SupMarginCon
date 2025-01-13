@@ -56,16 +56,16 @@ The SupMarginCon loss provides more discriminative properties than conventional 
 
 ### Decision Boundary and Perturbations
 
-![Decision Boundary without Margin](figure/SupMarginConA.pdf)  
+![Decision Boundary without Margin](assets/SupMarginConA.pdf)  
 _Fig. 1(a): Decision boundary $\theta_{i,p} = \theta_{i,a}$ without a margin._
 
-![Perturbation in Positive Sample](figure/SupMarginConB.pdf)  
+![Perturbation in Positive Sample](assets/SupMarginConB.pdf)  
 _Fig. 1(b): Incorrect decision due to perturbation on $\mathbf{z}_p$._
 
-![Perturbation in Negative Sample](figure/SupMarginConC.pdf)  
+![Perturbation in Negative Sample](assets/SupMarginConC.pdf)  
 _Fig. 1(c): Incorrect decision due to perturbation on $\mathbf{z}_a$._
 
-![Decision Boundary with Margin](figure/SupMarginConD.pdf)  
+![Decision Boundary with Margin](assets/SupMarginConD.pdf)  
 _Fig. 1(d): SupMarginCon with margin $m$ ensures robustness against perturbations._
 
 With the margin $m$, embeddings $\mathbf{z}_p$ and $\mathbf{z}_a$ can tolerate larger perturbations without causing incorrect decisions.
