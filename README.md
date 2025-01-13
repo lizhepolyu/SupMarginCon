@@ -8,10 +8,10 @@ Although the training objective attempts to pull the representations of similar 
 We define the cosine similarity as:
 
 $$
-\cos{\theta_{i,p}} = \frac{\mathbf{z}_{i}^{\top} \mathbf{z}_{p}}{\|\mathbf{z}_{i}\| \|\mathbf{z}_{p}\|},
+\cos{\theta_{i,p}} = \frac{**z**_{i}^{\top} **z**_{p}}{\|**z**_{i}\| \|**z**_{p}\|},
 $$
 
-where $\theta_{i,p}$ is the angle between the embeddings $\mathbf{z}_i$ and $\mathbf{z}_p$. A similar formula applies to $\mathbf{z}_i$ and $\mathbf{z}_a$. The decision boundary for $\mathbf{z}_{i}$, given specific $p$ (positive) and $a$ (negative) samples, is defined as:
+where $\theta_{i,p}$ is the angle between the embeddings $**z**_i$ and $**z**_p$. A similar formula applies to $**z**_i$ and $**z**_a$. The decision boundary for $**z**_{i}$, given specific $p$ (positive) and $a$ (negative) samples, is defined as:
 
 $$
 \theta_{i, p} = \theta_{i, a}.
